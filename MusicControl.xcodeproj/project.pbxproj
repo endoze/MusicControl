@@ -10,6 +10,11 @@
 		3786658C15BEC566003D6746 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3786658B15BEC566003D6746 /* Cocoa.framework */; };
 		3786659615BEC566003D6746 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3786659415BEC566003D6746 /* InfoPlist.strings */; };
 		3786659A15BEC566003D6746 /* MusicControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3786659915BEC566003D6746 /* MusicControl.m */; };
+		378665A315BECC94003D6746 /* iTunes.h in Headers */ = {isa = PBXBuildFile; fileRef = 378665A015BECC94003D6746 /* iTunes.h */; };
+		378665A415BECC94003D6746 /* Rdio.h in Headers */ = {isa = PBXBuildFile; fileRef = 378665A115BECC94003D6746 /* Rdio.h */; };
+		378665A515BECC94003D6746 /* Spotify.h in Headers */ = {isa = PBXBuildFile; fileRef = 378665A215BECC94003D6746 /* Spotify.h */; };
+		378665B215BEE4AB003D6746 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378665B115BEE4AB003D6746 /* ScriptingBridge.framework */; };
+		378665B415BEE574003D6746 /* MusicControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3786659815BEC566003D6746 /* MusicControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,10 @@
 		3786659715BEC566003D6746 /* MusicControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicControl-Prefix.pch"; sourceTree = "<group>"; };
 		3786659815BEC566003D6746 /* MusicControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicControl.h; sourceTree = "<group>"; };
 		3786659915BEC566003D6746 /* MusicControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicControl.m; sourceTree = "<group>"; };
+		378665A015BECC94003D6746 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		378665A115BECC94003D6746 /* Rdio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rdio.h; sourceTree = "<group>"; };
+		378665A215BECC94003D6746 /* Spotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spotify.h; sourceTree = "<group>"; };
+		378665B115BEE4AB003D6746 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378665B215BEE4AB003D6746 /* ScriptingBridge.framework in Frameworks */,
 				3786658C15BEC566003D6746 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +67,7 @@
 		3786658A15BEC566003D6746 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				378665B115BEE4AB003D6746 /* ScriptingBridge.framework */,
 				3786658B15BEC566003D6746 /* Cocoa.framework */,
 				3786658D15BEC566003D6746 /* Other Frameworks */,
 			);
@@ -78,6 +89,9 @@
 			children = (
 				3786659815BEC566003D6746 /* MusicControl.h */,
 				3786659915BEC566003D6746 /* MusicControl.m */,
+				378665A015BECC94003D6746 /* iTunes.h */,
+				378665A115BECC94003D6746 /* Rdio.h */,
+				378665A215BECC94003D6746 /* Spotify.h */,
 				3786659215BEC566003D6746 /* Supporting Files */,
 			);
 			path = MusicControl;
@@ -100,6 +114,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378665B415BEE574003D6746 /* MusicControl.h in Headers */,
+				378665A315BECC94003D6746 /* iTunes.h in Headers */,
+				378665A415BECC94003D6746 /* Rdio.h in Headers */,
+				378665A515BECC94003D6746 /* Spotify.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +261,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MusicControl/MusicControl-Prefix.pch";
 				INFOPLIST_FILE = "MusicControl/MusicControl-Info.plist";
+				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -258,6 +278,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MusicControl/MusicControl-Prefix.pch";
 				INFOPLIST_FILE = "MusicControl/MusicControl-Info.plist";
+				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -282,6 +304,7 @@
 				3786659F15BEC566003D6746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

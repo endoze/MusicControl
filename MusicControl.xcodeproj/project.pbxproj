@@ -87,11 +87,9 @@
 		3786659115BEC566003D6746 /* MusicControl */ = {
 			isa = PBXGroup;
 			children = (
+				3786660015BF180E003D6746 /* SBridgeHeaders */,
 				3786659815BEC566003D6746 /* MusicControl.h */,
 				3786659915BEC566003D6746 /* MusicControl.m */,
-				378665A015BECC94003D6746 /* iTunes.h */,
-				378665A115BECC94003D6746 /* Rdio.h */,
-				378665A215BECC94003D6746 /* Spotify.h */,
 				3786659215BEC566003D6746 /* Supporting Files */,
 			);
 			path = MusicControl;
@@ -105,6 +103,16 @@
 				3786659715BEC566003D6746 /* MusicControl-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3786660015BF180E003D6746 /* SBridgeHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				378665A015BECC94003D6746 /* iTunes.h */,
+				378665A115BECC94003D6746 /* Rdio.h */,
+				378665A215BECC94003D6746 /* Spotify.h */,
+			);
+			name = SBridgeHeaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
